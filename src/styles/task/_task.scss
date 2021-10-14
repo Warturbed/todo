@@ -1,0 +1,78 @@
+.task {
+	background-color: #fff;
+	padding: 30px 30px 40px 30px;
+	border-radius: 20px 20px 0 0;
+	height: 90%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: bold;
+		display: inline-block;
+	}
+	&__counter {
+		color: #666;
+	}
+	&__container {
+		height: 90%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+	}
+	&__item {
+		background-color: var(--color-grey);
+		padding: 5px 15px;
+		border-radius: 5px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& + & {
+			margin-top: 10px;
+		}
+		input {
+			display: none;
+		}
+		input:checked + label:before {
+			background-image: url('../img/ok.png');
+		}
+		label {
+			position: relative;
+			&::before {
+				content: '';
+				width: 18px;
+				height: 18px;
+				border: 2px solid #666;
+				border-radius: 2px;
+				background-repeat: no-repeat;
+				background-position: 50%;
+				background-size: 70%;
+				position: absolute;
+				top: -10px;
+				right: 3px;
+			}
+		}
+	}
+	&__name {
+		font-size: 16px;
+	}
+	&__button {
+		display: block;
+		align-self: center;
+	}
+}

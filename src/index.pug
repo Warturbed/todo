@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./styles/style.css")
+        title Document
+    body
+        .container
+            header.header
+                img(src="./img/sus.jpg", alt="").header__avatar
+                h1.header__title Список сусных дел
+            //.category
+                .category__row
+                    h3.category__title Категории:
+                    span.category__counter 1/5
+                .category__container
+                    ul.category__list
+                        .category__item
+                            span.category__name Категория 1
+                        .category__item
+                            span.category__name Категория 1
+                        .category__item
+                            span.category__name Категория 1
+                        .category__item
+                            span.category__name Категория 1
+                        .category__item
+                            span.category__name Категория 1
+                    button.button.category__button Добавить категорию
+            //.task
+                .task__row
+                    h3.task__title Категория 1
+                    span.category__counter 1/5 дел выполнено
+                .task__container
+                    ul.task__list
+                        .task__item
+                            span.task__name Дело 1
+                            input(type="checkbox" id="input1").task__input
+                            label(for="input1")
+                        .task__item
+                            span.task__name Дело 2
+                            input(type="checkbox" id="input2").task__input
+                            label(for="input2") 
+                    button.button.task__button Добавить задание
+            .add-task
+                .add-task__container
+                    .add-task__title Добавить неотложное дело
+                    input(type="text").add-task__input
+                    button.button.add-task__button Добавить дело
+
+                
+                

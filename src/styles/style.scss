@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import './container/container';
+@import './header/header';
+@import './main/main';
+@import './category/category';
+@import './task/task';
+@import './add-task/add-task';
+@import './button/button';
+@import './vars/vars';
+
+* {
+	color: #333;
+	letter-spacing: 1px;
+	font-family: 'Bad Script', cursive;
+	box-sizing: border-box;
+	list-style: none;
+	outline: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
