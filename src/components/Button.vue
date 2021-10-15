@@ -5,7 +5,7 @@
 <script>
 
 export default {
-  name: 'Category',
+  name: 'Button',
   props: {
 	item_data: Object,
 	name: String

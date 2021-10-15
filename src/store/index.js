@@ -58,6 +58,9 @@ export default createStore({
         })
       }
     },
+    DELETE_CATEGORY_FROM_STATE: (state, index) => {
+      state.categories.splice(index, 1)
+    },
   },
   actions: {
     CHANGE_STATUS({commit}, item) {
@@ -65,6 +68,9 @@ export default createStore({
     },
     ADD_ITEM({commit}, value) {
       commit('ADD_ITEM_IN_STATE', value);
+    },
+    DELETE_CATEGORY({commit}, index) {
+      commit('DELETE_CATEGORY_FROM_STATE', index);
     },
   },
   getters: {
