@@ -31,9 +31,9 @@ computed: {
     ]),
     type() {
         if (this.$route.params.index) {
-            return true
+          return true
         } else {
-            return false
+          return false
         }
     }
 },
@@ -43,12 +43,11 @@ methods: {
     ]),
     addItem() {
         if (this.type) {
-          this.ADD_ITEM([ this.addValue,this.$route.params.index ])
-          this.$router.back()
-        } else if (!this.type && this.CATEGORIES.length < 5){
-          this.ADD_ITEM(this.addValue)
-          this.$router.back()
+          this.ADD_ITEM({ value: this.addValue, index: this.$route.params.index })
+        } else{
+          this.ADD_ITEM({ value: this.addValue, index: this.$route.params.index })
         }
+        this.$router.back()
     }
 }
 }

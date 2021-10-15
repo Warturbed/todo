@@ -45,15 +45,15 @@ export default createStore({
     CHANGE_STATUS_IN_STATE: (state, item) => {
       state.categories[item.categoryIdx].tasks[item.taskIdx].checked = !state.categories[item.categoryIdx].tasks[item.taskIdx].checked
     },
-    ADD_ITEM_IN_STATE: (state, value) => {
-      if (value.length > 1) {
-        state.categories[value[1]].tasks.push({
-          name: value[0],
+    ADD_ITEM_IN_STATE: (state, item) => {
+      if (item.index) {
+        state.categories[item.index].tasks.push({
+          name: item.value,
           checked: false
         })
       } else {
         state.categories.push({
-          name: value,
+          name: item.value,
           tasks: []
         })
       }
@@ -66,8 +66,8 @@ export default createStore({
     CHANGE_STATUS({commit}, item) {
       commit('CHANGE_STATUS_IN_STATE', item);
     },
-    ADD_ITEM({commit}, value) {
-      commit('ADD_ITEM_IN_STATE', value);
+    ADD_ITEM({commit}, item) {
+      commit('ADD_ITEM_IN_STATE', item);
     },
     DELETE_CATEGORY({commit}, index) {
       commit('DELETE_CATEGORY_FROM_STATE', index);
