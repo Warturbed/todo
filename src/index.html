@@ -12,40 +12,39 @@
       <header class="header"><img class="header__avatar" src="./img/sus.jpg" alt="">
         <h1 class="header__title">Список сусных дел</h1>
       </header>
-      <!--.category
-      .category__row
-          h3.category__title Категории:
-          span.category__counter 1/5
-      .category__container
-          ul.category__list
-              .category__item
-                  span.category__name Категория 1
-              .category__item
-                  span.category__name Категория 1
-              .category__item
-                  span.category__name Категория 1
-              .category__item
-                  span.category__name Категория 1
-              .category__item
-                  span.category__name Категория 1
-          button.button.category__button Добавить категорию
-      -->
-      <!--.task
-      .task__row
-          h3.task__title Категория 1
-          span.category__counter 1/5 дел выполнено
-      .task__container
-          ul.task__list
-              .task__item
-                  span.task__name Дело 1
-                  input(type="checkbox" id="input1").task__input
-                  label(for="input1")
-              .task__item
-                  span.task__name Дело 2
-                  input(type="checkbox" id="input2").task__input
-                  label(for="input2") 
-          button.button.task__button Добавить задание
-      -->
+      <div class="category">
+        <div class="category__row">
+          <h3 class="category__title">Категории:</h3><span class="category__counter">1/5</span>
+        </div>
+        <div class="category__container">
+          <ul class="category__list">
+            <div class="category__item"><span class="category__name">Категория 1</span></div>
+            <div class="category__item"><span class="category__name">Категория 1</span></div>
+            <div class="category__item"><span class="category__name">Категория 1</span></div>
+            <div class="category__item"><span class="category__name">Категория 1</span></div>
+            <div class="category__item"><span class="category__name">Категория 1</span></div>
+          </ul>
+          <button class="button category__button">Добавить категорию</button>
+        </div>
+      </div>
+      <div class="task">
+        <div class="task__row">
+          <h3 class="task__title">Категория 1</h3><span class="category__counter">1/5 дел выполнено</span>
+        </div>
+        <div class="task__container">
+          <ul class="task__list">
+            <div class="task__item"><span class="task__name">Дело 1</span>
+              <input class="task__input" type="checkbox" id="input1">
+              <label for="input1"></label>
+            </div>
+            <div class="task__item"><span class="task__name">Дело 2</span>
+              <input class="task__input" type="checkbox" id="input2">
+              <label for="input2"> </label>
+            </div>
+          </ul>
+          <button class="button task__button">Добавить задание</button>
+        </div>
+      </div>
       <div class="add-task">
         <div class="add-task__container">
           <div class="add-task__title">Добавить неотложное дело</div>

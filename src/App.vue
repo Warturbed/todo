@@ -1,30 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <MainWrapper/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import MainWrapper from '@/components/MainWrapper.vue'
+
+export default {
+  name: 'App',
+  components: {
+    MainWrapper
+  },
 }
 
-#nav {
-  padding: 30px;
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+* {
+	color: #333;
+	letter-spacing: 1px;
+	font-family: 'Bad Script', cursive;
+	box-sizing: border-box;
+	list-style: none;
+	outline: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--color-green: #88b680;
+	--color-grey: #f0f4f5;
 }
 </style>
