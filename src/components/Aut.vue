@@ -22,7 +22,7 @@ export default {
     inputValue: function () {
       if (this.inputValue.toLowerCase() === 'пуська') {
         this.isSuccessTextVisible = !this.isSuccessTextVisible
-        setTimeout(() => this.$emit('closeAut'), 2000);
+        setTimeout(() => this.$emit('closeAut'), 2500);
       }
     },
   }
@@ -50,7 +50,7 @@ export default {
         font-size: 25px;
     }
     &__input {
-        font-size: 18px;
+        font-size: 16px;
         height: 35px;
         padding: 5px 10px;
         width: 100%;
