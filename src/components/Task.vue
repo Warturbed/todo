@@ -2,7 +2,7 @@
     <div class="task">
         <div class="task__row">
         <router-link class="task__title" :to="{name: 'home'}">{{ CATEGORIES[$route.params.idx].name }}</router-link>
-        <span class="task__counter">{{CATEGORIES[$route.params.idx].tasks.filter( item => {return item.checked === true}).length}}/{{ CATEGORIES[$route.params.idx].tasks.length }} дел выполнено</span>
+        <span class="task__counter">{{CATEGORIES[$route.params.idx].tasks.filter( item => {return item.checked === true}).length}}/{{ CATEGORIES[$route.params.idx].tasks.length }}</span>
 		<button class="task__edit" @click="deleteButtonToggle">
 			<svg viewBox="0 0 194.436 194.436" fill="#333" width="25px" height="25px">
 				<g>

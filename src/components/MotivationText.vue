@@ -40,9 +40,9 @@ export default {
 <style lang="scss">
 .motivation-text {
     display: inline-block;
-    padding-bottom: 10px;
-    font-size: 19px;
-    line-height: 25px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 20px;
     color: #fff;
     font-weight: bold;
     text-align: center;
