@@ -61,6 +61,9 @@ export default createStore({
     DELETE_CATEGORY_FROM_STATE: (state, index) => {
       state.categories.splice(index, 1)
     },
+    DELETE_TASK_FROM_CATEGORY: (state, object) => {
+      state.categories[object.categoryIdx].tasks.splice(object.taskIdx, 1)
+    },
   },
   actions: {
     CHANGE_STATUS({commit}, item) {
@@ -71,6 +74,9 @@ export default createStore({
     },
     DELETE_CATEGORY({commit}, index) {
       commit('DELETE_CATEGORY_FROM_STATE', index);
+    },
+    DELETE_TASK({commit}, object) {
+      commit('DELETE_TASK_FROM_CATEGORY', object);
     },
   },
   getters: {

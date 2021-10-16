@@ -1,17 +1,20 @@
 <template>
   <div class="container">
     <Header/>
+    <MotivationText/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import MotivationText from '@/components/MotivationText.vue'
 
 export default {
   name: 'MainWrapper',
   components: {
     Header,
+    MotivationText
   },
 }
 </script>

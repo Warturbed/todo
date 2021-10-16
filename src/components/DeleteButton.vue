@@ -1,5 +1,5 @@
 <template>
-    <button class="category__delete">
+    <button>
 		<svg viewBox="0 0 48 48" width="25px" height="25px" fill="none" stroke="#666" stroke-width="3px" >
             <defs>
             </defs>
@@ -34,5 +34,17 @@ export default {
 		position: absolute;
 		right: 15px;
 	}
+}
+.task {
+	&__delete {
+		z-index: 2;
+		border: none;
+		background: transparent;
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		position: absolute;
+		right: 15px;
+	}	
 }
 </style>

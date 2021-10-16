@@ -6,6 +6,7 @@ import AddItem from '@/components/AddItem.vue'
 const routes = [
   {
     path: '/',
+    name: "home",
     component: Category
   },
   {

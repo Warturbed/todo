@@ -27,6 +27,7 @@
 					>
 					<router-link class="category__name" :to="{name: 'category', params: {idx: index}}">{{category.name}}</router-link>
 					<DeleteButton
+						class="category__delete"
 						@click="deleteCategory(index)"
 						v-if="isDeleteBtnVisible"
 					/>

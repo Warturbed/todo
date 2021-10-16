@@ -2,7 +2,7 @@
     <div class="add-task">
         <div class="add-task__container">
           <div class="add-task__title">{{type ? 'Добавить неотложное дело' : 'Добавить категорию'}}</div>
-          <input class="add-task__input" type="text" v-model="addValue">
+          <input class="add-task__input" type="text" v-model.trim="addValue">
           <Button
             :name="'Добавить'"
             @click="addItem"
@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-        addValue: ''
+      addValue: ''
     }
   },
 computed: {
@@ -42,9 +42,9 @@ methods: {
       'ADD_ITEM'
     ]),
     addItem() {
-        if (this.type) {
+        if (this.type && this.addValue) {
           this.ADD_ITEM({ value: this.addValue, index: this.$route.params.index })
-        } else{
+        } else if (!this.type && this.addValue) {
           this.ADD_ITEM({ value: this.addValue, index: this.$route.params.index })
         }
         this.$router.back()
