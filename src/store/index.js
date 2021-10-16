@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import createPersistedState from "vuex-persistedstate"
 
 export default createStore({
   state: {
@@ -39,8 +40,9 @@ export default createStore({
           }
         ]
       }
-    ]
+    ],
   },
+  plugins: [createPersistedState()],
   mutations: {
     CHANGE_STATUS_IN_STATE: (state, item) => {
       state.categories[item.categoryIdx].tasks[item.taskIdx].checked = !state.categories[item.categoryIdx].tasks[item.taskIdx].checked

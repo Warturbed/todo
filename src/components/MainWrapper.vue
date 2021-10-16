@@ -3,25 +3,44 @@
     <Header/>
     <MotivationText/>
     <router-view></router-view>
+    <Aut
+      v-if="isAutPopupVisible"
+      :isAutPopupVisible="isAutPopupVisible"
+      @closeAut="closeAut"
+    />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import MotivationText from '@/components/MotivationText.vue'
+import Aut from '@/components/Aut.vue'
 
 export default {
   name: 'MainWrapper',
   components: {
     Header,
-    MotivationText
+    MotivationText,
+    Aut
   },
+  data() {
+    return {
+      inputValue: '',
+      isAutPopupVisible: true
+    }
+  },
+  methods: {
+    closeAut() {
+      this.isAutPopupVisible = !this.isAutPopupVisible
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .container {
+  z-index: 1;
 	position: absolute;
 	top: 0;
 	bottom: 0;
