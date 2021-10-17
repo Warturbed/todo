@@ -1,9 +1,13 @@
 <template>
   <div class="aut-popup">
     <div class="aut-popup__container">
-        <h3 class="aut-popup__title">Введите ключевое слово</h3>
+        <h3 class="aut-popup__title">Введите 
+            <strong>ключевое слово</strong>
+        </h3>
         <input class="aut-popup__input" type="text" v-model.trim="inputValue">
-        <p class="aut-popup__success" v-show="isSuccessTextVisible">Чертовски верно :)</p>
+        <transition name="fade">
+            <p class="aut-popup__success" v-if="isSuccessTextVisible">Чертовски верно :)</p>
+        </transition>
     </div>
   </div>
 </template>
@@ -20,7 +24,7 @@ export default {
   },
   watch: {
     inputValue: function () {
-      if (this.inputValue.toLowerCase() === 'пуська') {
+      if (this.inputValue.toLowerCase() === 'ключевое слово') {
         this.isSuccessTextVisible = !this.isSuccessTextVisible
         setTimeout(() => this.$emit('closeAut'), 2500);
       }

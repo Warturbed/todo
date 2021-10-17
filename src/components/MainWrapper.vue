@@ -3,11 +3,13 @@
     <Header/>
     <MotivationText/>
     <router-view></router-view>
-    <Aut
-      v-if="isAutPopupVisible"
-      :isAutPopupVisible="isAutPopupVisible"
-      @closeAut="closeAut"
-    />
+    <transition name="fade">
+      <Aut
+        v-if="isAutPopupVisible"
+        :isAutPopupVisible="isAutPopupVisible"
+        @closeAut="closeAut"
+      />
+    </transition>
   </div>
 </template>
 
@@ -49,5 +51,11 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>
